@@ -9,9 +9,15 @@ public class TCommand extends CompositeCommand {
 	private TopTen addon;
 
 	public TCommand(TopTen addon, CompositeCommand parent) {
-		super(addon, parent, "topten", "topislands", "top");
-
+		super(addon, parent, "toptenheads", "topleaderboard", "headleaderboard", "topheads", "islandleaderboard");
 		this.addon = addon;
+	}
+
+	public TCommand(TopTen addon) {
+		super(addon, "toptenheads", "topheads", "tth", "topleaderboard");
+		this.addon = addon;
+
+
 	}
 
 	@Override

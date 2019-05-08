@@ -18,7 +18,7 @@ public class AddonVerification {
 		if (gamemodeAddons.size() > 0) {
 			for (GameModeAddon gm : gamemodeAddons) {
 				if (gm.getPlayerCommand().isPresent()) {
-					new TCommand(addon, gm.getPlayerCommand().get());
+					new TCommand(addon, gm.getPlayerCommand().get()).setup();
 				}
 
 			}

@@ -1,5 +1,7 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
   
   <groupId>TopTen</groupId>
   <artifactId>TopTen</artifactId>
@@ -61,6 +63,12 @@
 			<version>1.5.0-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
+	
+	    <dependency>
+	        <groupId>world.bentobox</groupId>
+	        <artifactId>level</artifactId>
+	        <version>1.4.0</version>
+	    </dependency>
 	
 		<dependency>
 			<groupId>org.spigotmc</groupId>
@@ -128,11 +136,11 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.8.0</version>
+				<version>3.7.0</version>
 				<configuration>
 					<source>${java.version}</source>
 					<target>${java.version}</target>
-					<release>11</release>
+					<release>8</release>
 				</configuration>
 				
 			</plugin>			
@@ -146,7 +154,7 @@
 				<artifactId>maven-jar-plugin</artifactId>
 				<version>3.1.0</version>
 				<configuration>
-				    <outputDirectory>target/</outputDirectory>
+				    <outputDirectory>C://MinecraftServer/Skyblock-1.13/plugins/BentoBox/addons/</outputDirectory>
 				</configuration>
 			</plugin>
 			<plugin>
