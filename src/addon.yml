@@ -1,0 +1,8 @@
+name: TopTen
+author: FlailoftheLord
+main: world.bentobox.topten.TopTen
+
+depend: 
+- Level
+
+softdepend: [BSkyblock, AcidIsland, CaveBlock, SkyGrid]
