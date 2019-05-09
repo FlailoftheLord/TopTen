@@ -24,7 +24,8 @@ public class TCommand extends CompositeCommand {
 	public void setup() {
 		setDescription("info about the island leaderboard.");
 		setOnlyPlayer(true);
-		this.setPermission("island.topten");
+		this.setPermission("bskyblock.topten");
+
 	}
 
 	@Override

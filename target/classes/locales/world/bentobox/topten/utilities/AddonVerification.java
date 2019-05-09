@@ -3,6 +3,7 @@ package world.bentobox.topten.utilities;
 import java.util.List;
 
 import world.bentobox.bentobox.api.addons.GameModeAddon;
+import world.bentobox.bentobox.api.commands.CompositeCommand;
 import world.bentobox.topten.TCommand;
 import world.bentobox.topten.TopTen;
 
@@ -18,7 +19,12 @@ public class AddonVerification {
 		if (gamemodeAddons.size() > 0) {
 			for (GameModeAddon gm : gamemodeAddons) {
 				if (gm.getPlayerCommand().isPresent()) {
-					new TCommand(addon, gm.getPlayerCommand().get());
+					CompositeCommand gmCmd = gm.getPlayerCommand().get();
+					new TCommand(addon, gmCmd).setup();
+
+					addon.logger.console("Found Gamemode Addon: " + gm.getDescription().getName());
+
+					continue;
 				}
 
 			}

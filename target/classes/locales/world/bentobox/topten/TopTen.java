@@ -1,18 +1,18 @@
 package world.bentobox.topten;
 
-import java.util.logging.Logger;
-
 import world.bentobox.bentobox.BentoBox;
 import world.bentobox.bentobox.api.addons.Addon;
 import world.bentobox.bentobox.managers.AddonsManager;
 import world.bentobox.level.Level;
 import world.bentobox.topten.listeners.IslandLevelUpdate;
 import world.bentobox.topten.utilities.AddonVerification;
+import world.bentobox.topten.utilities.Logger;
 
 public class TopTen extends Addon {
 
 	public BentoBox plugin;
 	public AddonsManager manager;
+	public java.util.logging.Logger pluginLogger;
 	public Logger logger;
 
 	public Level levelAddon;
@@ -21,12 +21,14 @@ public class TopTen extends Addon {
 	public void onEnable() {
 		plugin = this.getPlugin();
 		manager = getPlugin().getAddonsManager();
-		logger = getLogger();
+		pluginLogger = getLogger();
+		logger = new Logger(this);
 		if (!new AddonVerification(this).setup()) {
 			this.disable();
 			return;
 		}
 		levelAddon = (Level) this.getAddonByName("Level").get();
+		logger.console("Level addon found and hookered!");
 
 		registerListeners();
 
@@ -47,8 +49,8 @@ public class TopTen extends Addon {
 		setState(State.DISABLED);
 		logger.warning("You MUST have a bentobox gamemode addon installed!");
 		logger.warning("Please install one of the following addons, and restart your server:");
-		logger.info("    - BSkyblock");
-		logger.info("    - AcidIsland");
+		logger.console("    - BSkyblock");
+		logger.console("    - AcidIsland");
 	}
 
 

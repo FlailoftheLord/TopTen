@@ -3,6 +3,6 @@ author: FlailoftheLord
 main: world.bentobox.topten.TopTen
 description: An addon for Levels, a bentobox addon.
 
-depend: [Level]
+depend: Level
 
-softdepend: [BSkyblock, AcidIsland, CaveBlock, SkyGrid]
+softdepend: BSkyblock, AcidIsland, CaveBlock, SkyGrid

@@ -2,5 +2,6 @@ world\bentobox\topten\dataHandler\Storage.class
 world\bentobox\topten\TopTen.class
 world\bentobox\topten\dataHandler\IslandLevel.class
 world\bentobox\topten\listeners\IslandLevelUpdate.class
+world\bentobox\topten\utilities\Logger.class
 world\bentobox\topten\TCommand.class
 world\bentobox\topten\utilities\AddonVerification.class
