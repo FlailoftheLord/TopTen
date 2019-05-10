@@ -15,6 +15,7 @@ public class TopTen extends Addon {
 	public java.util.logging.Logger pluginLogger;
 	public Logger logger;
 
+	public String gamemode;
 	public Level levelAddon;
 
 	@Override
@@ -30,6 +31,8 @@ public class TopTen extends Addon {
 		levelAddon = (Level) this.getAddonByName("Level").get();
 		logger.console("Level addon found and hookered!");
 
+		registerCommand();
+
 		registerListeners();
 
 	}
@@ -43,6 +46,10 @@ public class TopTen extends Addon {
 
 	private void registerListeners() {
 		this.registerListener(new IslandLevelUpdate());
+	}
+
+	private void registerCommand() {
+		new TCommand(this).setup();
 	}
 
 	private void disable() {

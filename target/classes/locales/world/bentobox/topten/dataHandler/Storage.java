@@ -8,11 +8,11 @@ import world.bentobox.bentobox.database.Database;
 import world.bentobox.topten.TopTen;
 
 public class Storage {
-	private final Database<IslandLevel> database;
-	private final Map<UUID, IslandLevel> cache;
+	private final Database<IslandLeaderboard> database;
+	private final Map<UUID, IslandLeaderboard> cache;
 
 	public Storage(TopTen addon) {
-		database = new Database<>(addon, IslandLevel.class);
+		database = new Database<>(addon, IslandLeaderboard.class);
 		cache = new HashMap<>();
 	}
 

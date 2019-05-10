@@ -9,17 +9,19 @@ import world.bentobox.topten.utilities.AddonVerification;
 import world.bentobox.topten.utilities.Logger;
 
 public class TopTen extends Addon {
+	public static TopTen addon;
 
 	public BentoBox plugin;
+	public Level levelAddon;
 	public AddonsManager manager;
 	public java.util.logging.Logger pluginLogger;
 	public Logger logger;
 
 	public String gamemode;
-	public Level levelAddon;
 
 	@Override
 	public void onEnable() {
+		addon = this;
 		plugin = this.getPlugin();
 		manager = getPlugin().getAddonsManager();
 		pluginLogger = getLogger();

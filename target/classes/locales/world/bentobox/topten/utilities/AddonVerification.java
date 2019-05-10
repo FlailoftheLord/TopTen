@@ -22,7 +22,7 @@ public class AddonVerification {
 					CompositeCommand gmCmd = gm.getPlayerCommand().get();
 					new TCommand(addon, gmCmd).setup();
 
-					addon.logger.console("Found Gamemode Addon: " + gm.getDescription().getName());
+					addon.logger.console("Found Gamemode addon: " + gm.getDescription().getName());
 
 					continue;
 				}
